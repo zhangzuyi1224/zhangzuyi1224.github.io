@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>CSP-S2022游记</title>
+      <link href="/2022/12/08/CSP-S2022%E6%B8%B8%E8%AE%B0/"/>
+      <url>/2022/12/08/CSP-S2022%E6%B8%B8%E8%AE%B0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="CSP-S2022游记"><a href="#CSP-S2022游记" class="headerlink" title="CSP-S2022游记"></a>CSP-S2022游记</h1><h2 id="赛前"><a href="#赛前" class="headerlink" title="赛前"></a>赛前</h2><p>提前一个小时到了纪中<br>一直在祈祷T1不炸(没想到还是炸了)</p><h2 id="赛时"><a href="#赛时" class="headerlink" title="赛时"></a>赛时</h2><p>一上机就发现，这yj鼠标第一次双击时竟然不是双击而是点击？？？<br>第二次双击才是双击？？？<br>不过为了不耽误我的时间，而且也不是不能用，就决定不申请更换了<br>还有<br>纪中的dev-c++是真的拉胯<br>调试时右边监控的变量不会变？？？<br>多次尝试无果后，我只能通过中间输出和脑内模拟来调试<br>这让我消耗了大量的时间<br><del>十分感谢</del><br>（这是其中一个让我时间分配出了问题的原因）  </p><hr><p>一上来看了眼T1，似乎DP?<br>又发现这适用于一条链<br>苦思无果后，便开始看T2<br>一眼ST表<br>似乎是二维ST表？<br>可我只会正方形的二维ST表，怎么办？现推？<br>但看了看数据范围，会TLE<br>无奈之下只好看起了T3<br>通过简单的推理，发现只有在边数&#x3D;n时才有可能为YES<br>这可以快速判断出一些答案<br>于是我愉快的敲起了T3的暴力(结果一敲就是一个小时，这还得再次感谢dev-c++)<br>思路在我脑海中快速成型<br>类似于建反向边来使得能找到出口为u的边，以便于给正向边(i^1)打上标记<br>结果dfs忘记加vis[v]&#x3D;1<br>调了一年。。。<br>删边时忘判是不是反向边<br>调了一年。。。<br>过了小样例，回来做T2<br>我还是感觉要ST表<br>但我考场时局限于在一个那个二维矩阵上用ST表<br>导致时间复杂度完全承受不起<br>但几分钟内没想出其他方法<br>前面又还有个T1没做<br>无奈之下，只好返回去做T1<br>我心想，T1是难度<del>最低的</del>，一定要把它拿下<br>2500<em>4不是刚好等于1e4吗，再乘个k刚好1e6,或者乘个m刚好1e8，这是不是什么提示？<br>复杂度里有个4n?也就是说，可能要for四遍n吧？<br>我开始往这方面想<br>于是设计了个dp[i][j]表示当前已经是选了i个景点，且第i个是j号景点<br>复杂度O(3n)<br>加上枚举最后的景点一共刚好O(4n)<br>再考虑不重复，用一个vis记录转移时用了的点<br>复杂度再乘个n，一共O(3n</em>n)<br>又调了一年。。。<br>终于小样例过了，这似乎是正解？<br>但事实很快打了脸<br>大样例错了<br>眼看时间还是不到半小时<br>只好赌一下我这个玄学代码能拿几分</p><h2 id="赛后总结"><a href="#赛后总结" class="headerlink" title="赛后总结"></a>赛后总结</h2><ol><li>调试花了太多时间了</li><li>时间分配不是很合理，不应该执着于T1的,T2明明更有思路，如果在多想个半个小时还是有把握做出来的</li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2022/12/07/hello-world/"/>
+      <url>/2022/12/07/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
